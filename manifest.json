@@ -1,0 +1,25 @@
+{
+  "name": "Douyu净化助手",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "我的第一个Chrome插件，还不错吧",
+  "background": { "scripts": ["background.js"] },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.douyutv.com/*"],
+      "js": ["js/jquery-2.2.0.min.js","js/myscript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Douyu净化助手!",
+    "default_popup": "popup.html"
+  }
+}
