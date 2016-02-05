@@ -16,7 +16,7 @@ function delete_actor(black_list) {
     console.log(black_list);
     console.log(typeof black_list);
     $("#live-list-contentbox li,#live-new-show-content-box li").each(function(i) {
-        $(this).append('<a class="delete primary_button01" href="javascript:;"><div style="height:20px;width:40px;font-size:15px;color: #000; height: 24px; font-size: 14px; text-align: center; line-height: 24px; padding-left: 10px; padding-right: 10px; border: 1px solid #d7d7d7; border-radius: 4px; margin-right: 5px;">删除</div></a>');
+        $(this).append('<a href="javascript:;" style="font-size:18px;background:rgb(255, 67, 81);" class="delete button button-glow button-rounded button-caution">屏蔽</a>');
 
         for (p in black_list) {
             if (eval("/" + black_list[p] + "/").test($(this).context.innerHTML)) {
